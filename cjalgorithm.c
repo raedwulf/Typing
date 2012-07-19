@@ -76,7 +76,6 @@ int runCJAlgorithm(char *filename)
 			}
 			
 			if (REPEAT_LAYOUTSTORE) {
-				fclose(fp);
 				fp = fopen(filename, "r");
 				isFileEmpty = FALSE;
 			}
