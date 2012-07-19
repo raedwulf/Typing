@@ -66,7 +66,20 @@ int initValues()
 		for (i = 0; i < ksize; ++i)
 			distanceCosts[i] = costsCopy[i];
 		
+	} else if (fullKeyboard == FK_BS4822) {
+		
+		// These costs are optimized for a full standard layout. Any cost that 
+		// is 999 is not supposed to contain any character.
+		int64_t costsCopy[KSIZE_MAX] = {
+			110, 100,  90,  75, 100, 120, 160, 100,  75,  90, 100, 110, 120, 999,
+			999,  40,  40,  30,  40,  70,  80,  40,  30,  40,  40,  60,  90, 999, 
+			999,   0,   0,   0,   0,  30,  30,   0,   0,   0,   0,  50,  80, 999, 
+			 90,  70,  70,  70,  50,  95,  60,  40,  60,  70,  70, 999, 999, 999, 
+		};
+		for (i = 0; i < ksize; ++i)
+			distanceCosts[i] = costsCopy[i];
 	}
+
 
 	// Distance in mm.
 	trueDistance[ 0] = 19; trueDistance[ 1] = 19; trueDistance[ 2] = 19; trueDistance[ 3] = 19; trueDistance[ 4] = 28; 

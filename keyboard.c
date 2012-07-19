@@ -143,7 +143,7 @@ int initKeyboard(Keyboard *k)
 		}
 	}
 	
-	if (keepConsonantsRight && fullKeyboard == FK_STANDARD) {
+	if (keepConsonantsRight && (fullKeyboard == FK_STANDARD) || (fullKeyboard == FK_BS4822)) {
 		const char *consonants = "bcdfghjklmnpqrstvwxyz";
 		/* TODO: Swap both shifted and unshifted */
 		int halfIndices[] = {
@@ -425,7 +425,7 @@ int printLayoutRaw(char layout[])
 				else if (i % 12 == 5) printf("    ");
 				else printf("   ");
 			}
-		} else if (fullKeyboard == FK_STANDARD) {
+		} else if (fullKeyboard == FK_STANDARD || fullKeyboard == FK_BS4822) {
 			if (printable[i] == FALSE) {
 				if (i % 14 == 13) printf("   \n");
 				else printf("   ");
@@ -583,7 +583,7 @@ int isLegalSwap(Keyboard *k, int i, int j)
 	
 	if (fullKeyboard == FK_NO) {
 		return legalBox[i] == legalBox[j];
-	} else if (fullKeyboard == FK_STANDARD) {
+	} else if (fullKeyboard == FK_STANDARD || fullKeyboard == FK_BS4822) {
 		if (keepConsonantsRight) return bigLegalBoxConsonants[i] == bigLegalBoxConsonants[j];
 		else return bigLegalBox[i] == bigLegalBox[j];
 	} else if (fullKeyboard == FK_KINESIS) {

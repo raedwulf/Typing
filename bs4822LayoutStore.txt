@@ -1,0 +1,4 @@
+// You can put comments after two slashes.
+// You can also put comments on the same line as a layout after you've typed in the layout.
+//
+//`1234567890-=qwertyuiop[]asdfghjkl;'#\\zxcvbnm,./¬!\"#$%^&*()_+QWERTYUIOP{}ASDFGHJKL:@~|ZXCVBNM<>?"

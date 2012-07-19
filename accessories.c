@@ -90,8 +90,11 @@ int getCommands()
 			} else if (streq(cmd+6, "iphone")) {
 				setksize(FK_IPHONE);
 				printf("Keyboard set to iPhone. All user-defined values have been reset.\n\n");
+			} else if (streq(cmd+6, "bs4822")) {
+				setksize(FK_BS4822);
+				printf("Keyboard set to British Standard BS 4822. All user-defined values have been reset.\n\n");
 			} else {
-				printf("Undefined input. Valid inputs: \"setfk no\" (do not use full keyboard), \"setfk standard\" (use standard full keyboard), \"setfk kinesis\" (use Kinesis full keyboard).\n\n");
+				printf("Undefined input. Valid inputs: \"setfk no\" (do not use full keyboard), \"setfk standard\" (use standard full keyboard), \"setfk kinesis\" (use Kinesis full keyboard), \"setfk bs4822\" (use BS 4822 full keyboard).\n\n");
 			}
 
 		} else if (streq(cmd, "test fitness")) {

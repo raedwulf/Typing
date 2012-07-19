@@ -18,6 +18,7 @@
 #define FK_STANDARD 1
 #define FK_KINESIS 2
 #define FK_IPHONE 3
+#define FK_BS4822 4 /* British Standard 4822 */
 
 #define TRUE 1
 #define FALSE 0
