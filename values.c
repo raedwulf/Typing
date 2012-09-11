@@ -106,7 +106,7 @@ void initCosts()
 	
 	keepZXCV = FALSE;
 	keepQWERTY = FALSE;
-	keepNumbers = 0;
+	keepNumbers = 1;
 	keepParentheses = TRUE;
 	keepShiftPairs = FALSE;
 	keepTab = FALSE;
@@ -120,7 +120,7 @@ void initCosts()
 	qwertyPosCost = 14;
 	qwertyFingerCost = 4;
 	qwertyHandCost = 20;
-	parenthesesCost = 5000000;
+	bracketsCost = 5000000;
 	numbersShiftedCost = -1000000;
 
 	if (fullKeyboard == FK_KINESIS) {
